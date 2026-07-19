@@ -167,14 +167,24 @@ ol.pubs li::before {
   font-style: italic;
 }
 .pub-links {
-  font-size: 0.9rem;
-  white-space: nowrap;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
 }
 .pub-links a {
-  margin-right: 0.5rem;
+  display: inline-block;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.35;
 }
-.pub-links a::before { content: "["; color: var(--muted); }
-.pub-links a::after  { content: "]"; color: var(--muted); }
+.pub-links a:hover {
+  background: #fff;
+  text-decoration: none;
+}
 
 /* Small screens */
 @media (max-width: 540px) {
