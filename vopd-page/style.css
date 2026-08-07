@@ -38,13 +38,14 @@ header {
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--rule);
 }
-.eyebrow {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+.back-link {
+  display: inline-block;
+  margin: 0 0 1.15rem;
   color: var(--muted);
-  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
 }
+.back-link:hover { color: var(--link); }
 h1 {
   font-size: 1.95rem;
   font-weight: 700;
@@ -61,9 +62,24 @@ h1 {
 }
 .affil { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.1rem; }
 
-.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.45rem; }
-.links a { font-size: 0.98rem; }
-.links .sep { color: var(--muted); font-size: 0.9rem; }
+.pub-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+.pub-links a {
+  display: inline-block;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.35;
+}
+.pub-links a:hover {
+  background: #fff;
+  text-decoration: none;
+}
 
 /* Sections */
 section { margin-bottom: 2.6rem; }
@@ -99,18 +115,6 @@ mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 
 .note { font-size: 0.9rem; color: var(--muted); font-style: italic; }
 
-/* BibTeX */
-pre.bibtex {
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  padding: 1rem 1.1rem;
-  overflow-x: auto;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: var(--ink);
-}
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.88em;
