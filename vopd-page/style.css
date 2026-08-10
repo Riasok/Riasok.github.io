@@ -41,11 +41,19 @@ header {
 .back-link {
   display: inline-block;
   margin: 0 0 1.15rem;
-  color: var(--muted);
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
   font-size: 0.9rem;
   line-height: 1.2;
 }
-.back-link:hover { color: var(--link); }
+.back-link:hover {
+  border-color: var(--link);
+  color: var(--link);
+  text-decoration: none;
+}
 h1 {
   font-size: 1.95rem;
   font-weight: 700;
