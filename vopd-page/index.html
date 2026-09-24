@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KL for a KL: On-Policy Distillation with Control Variate Baseline</title>
   <meta name="description" content="vOPD — On-Policy Distillation stabilized with a control-variate baseline: the closed-form per-token negative reverse-KL value function reduces gradient variance without bias.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&amp;family=Urbanist:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
     window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
@@ -15,7 +19,7 @@
 <main>
 
   <header>
-    <a class="back-link" href="../">Back to Home</a>
+    <a class="back-link" href="../"><span aria-hidden="true">&larr;</span> Back to home</a>
     <h1>KL for a KL: On-Policy Distillation with a Control Variate Baseline</h1>
 
     <p class="authors">
@@ -30,6 +34,7 @@
     <nav class="pub-links" aria-label="Paper links">
       <a href="https://arxiv.org/abs/2605.07865">arXiv</a>
       <a href="https://github.com/Riasok/vOPD">Code</a>
+      <a href="#bibtex">BibTeX</a>
     </nav>
   </header>
 
@@ -106,6 +111,16 @@
       <li><strong>Unbiasedness matters:</strong> the biased <code>OPD<sub>top-k</sub></code> barely helps, while <code>vOPD<sub>top-k</sub></code> retains the full gains.</li>
     </ul>
     <p class="note">Full quantitative tables and ablations are in the <a href="https://arxiv.org/abs/2605.07865">paper</a>.</p>
+  </section>
+
+  <section id="bibtex">
+    <h2>BibTeX</h2>
+    <pre class="bibtex">@article{oh2026klforakl,
+  title   = {KL for a KL: On-Policy Distillation with Control Variate Baseline},
+  author  = {Oh, Minjae and Song, Sangjun and Choi, Gyubin and Choi, Yunho and Jo, Yohan},
+  journal = {arXiv preprint arXiv:2605.07865},
+  year    = {2026}
+}</pre>
   </section>
 
   <footer>

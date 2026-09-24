@@ -6,6 +6,8 @@
   --link: #b3552d;
   --rule: #e5e2d8;
   --measure: 46rem;
+  --font-title: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-main: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -15,7 +17,8 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg);
-  font-family: Charter, Georgia, Cambria, "Times New Roman", serif;
+  font-family: var(--font-main);
+  font-optical-sizing: auto;
   font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -33,6 +36,8 @@ a:hover { text-decoration: underline; }
 p { margin: 0 0 1rem; }
 
 /* Header */
+h1, h2, .authors, .affil { font-family: var(--font-title); }
+.back-link:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 header {
   margin-bottom: 2.8rem;
   padding-bottom: 1.6rem;
@@ -41,27 +46,21 @@ header {
 .back-link {
   display: inline-block;
   margin: 0 0 1.15rem;
-  padding: 0.25rem 0.65rem;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: var(--surface);
-  color: var(--ink);
+  color: var(--link);
   font-size: 0.9rem;
   line-height: 1.2;
 }
 .back-link:hover {
-  border-color: var(--link);
-  color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
 }
 h1 {
   font-size: 1.95rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.25;
   margin: 0 0 1rem;
 }
-.authors { margin: 0 0 0.25rem; }
+.authors { margin: 0 0 0.25rem; font-size: 0.95rem; }
 .me {
   font-weight: 600;
   text-decoration: underline;
@@ -92,10 +91,9 @@ h1 {
 /* Sections */
 section { margin-bottom: 2.6rem; }
 h2 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
   color: var(--muted);
   margin: 0 0 1.1rem;
   padding-bottom: 0.4rem;
@@ -123,6 +121,16 @@ mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 
 .note { font-size: 0.9rem; color: var(--muted); font-style: italic; }
 
+pre.bibtex {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.88em;
