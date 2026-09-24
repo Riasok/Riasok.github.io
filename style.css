@@ -5,7 +5,9 @@
   --muted: #6f6a60;     /* warm gray */
   --link: #b3552d;      /* clay / terracotta accent */
   --rule: #e5e2d8;      /* warm hairline */
-  --measure: 42rem;
+  --measure: 50rem;
+  --font-title: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-main: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -16,7 +18,9 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg);
-  font-family: Charter, Georgia, Cambria, "Times New Roman", serif;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-optical-sizing: auto;
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -32,9 +36,15 @@ main {
 /* Header */
 header { margin-bottom: 2.5rem; }
 
+h1, h2, .title-style, .entry strong, .title, .authors, .venue {
+  font-family: var(--font-title);
+}
+
+.entry strong { font-weight: 500; }
+
 h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(2.4rem, 1.8rem + 2vw, 3rem);
+  font-weight: 400;
   letter-spacing: -0.01em;
   margin: 0 0 0.6rem;
 }
@@ -43,22 +53,28 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.3rem 0.45rem;
+  gap: 0.1rem;
 }
-.links a { font-size: 0.95rem; }
-.links .sep {
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2.5rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  border-radius: 0.25rem;
 }
+.links svg { display: block; width: 1.2rem; height: 1.2rem; }
+.links a:hover { color: var(--link); text-decoration: none; }
+.links a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
 /* Sections */
 section { margin-bottom: 2.8rem; }
 
 h2 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
   color: var(--muted);
   margin: 0 0 1.1rem;
   padding-bottom: 0.4rem;
@@ -68,7 +84,7 @@ h2 {
 /* Section heading sharing a row with a small note (e.g. Publications) */
 .head-row {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
   margin: 0 0 1.1rem;
@@ -82,7 +98,7 @@ h2 {
 }
 .head-row .note {
   margin: 0;
-  padding-top: 0.08rem;
+  padding-top: 0;
   font-size: 0.68rem;
   font-style: italic;
   color: var(--muted);
@@ -152,7 +168,8 @@ ol.pubs li::before {
   color: var(--muted);
 }
 
-.title { font-weight: 600; }
+.title { font-weight: 500; }
+.authors { font-size: 0.95rem; }
 .me {
   font-weight: 600;
   text-decoration: underline;
